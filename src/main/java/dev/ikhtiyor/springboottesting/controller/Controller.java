@@ -103,11 +103,22 @@ public class Controller {
         return ResponseEntity.ok().build();
     }
 
+    /**
+     * Generate random integer ID for student
+     *
+     * @return Integer
+     */
     private Integer generateId() {
         double random = Math.random() * 10;
         return (int) random;
     }
 
+    /**
+     * Get student by ID from array
+     *
+     * @param id id
+     * @return StudentDTO
+     */
     private StudentDTO getStudentFromArray(Integer id) {
         return students
                 .stream()
